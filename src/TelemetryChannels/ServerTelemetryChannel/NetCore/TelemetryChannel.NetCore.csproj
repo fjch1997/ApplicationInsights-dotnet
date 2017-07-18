@@ -4,14 +4,15 @@
     <TargetFramework>netstandard1.6</TargetFramework>
     <Authors>Microsoft</Authors>
     <Company>Microsoft</Company>
-    <Copyright>Copyright � Microsoft. All Rights Reserved.</Copyright>
+    <Copyright>Copyright © Microsoft. All Rights Reserved.</Copyright>
+	<GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>TRACE;DEBUG;NETCORE;NETSTANDARD1_6</DefineConstants>
   </PropertyGroup>
-
-  <Import Project="..\Shared\Shared.projitems" Label="Shared" />
+  
   <Import Project="..\..\..\..\..\packages\MicroBuild.Core.0.2.0\build\MicroBuild.Core.props" Condition="Exists('..\..\..\..\..\packages\MicroBuild.Core.0.2.0\build\MicroBuild.Core.props')" />
   <Import Project="..\..\..\..\..\packages\MicroBuild.Core.0.2.0\build\MicroBuild.Core.targets" Condition="Exists('..\..\..\..\..\packages\MicroBuild.Core.0.2.0\build\MicroBuild.Core.targets')" />
   <Import Project="..\..\..\..\..\packages\StyleCop.MSBuild.4.7.55.0\build\StyleCop.MSBuild.Targets" Condition="Exists('..\..\..\..\..\packages\StyleCop.MSBuild.4.7.55.0\build\StyleCop.MSBuild.Targets')" />
