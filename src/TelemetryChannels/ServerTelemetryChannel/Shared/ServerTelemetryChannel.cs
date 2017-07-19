@@ -24,19 +24,26 @@
         private int telemetryBufferCapacity;
         private ITelemetryProcessor telemetryProcessor;
         private bool isInitialized;
-        
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ServerTelemetryChannel"/> class.
         /// </summary>
+#if !NETSTANDARD1_6
         public ServerTelemetryChannel() : this(new Network(), new WebApplicationLifecycle())
+#else
+        // IApplicationLifecycle implemenation for netcore need to be written instead of null here.
+        public ServerTelemetryChannel() : this(new Network(), null)
+#endif
         {
         }
         
         internal ServerTelemetryChannel(INetwork network, IApplicationLifecycle applicationLifecycle)
         {
             var policies = new TransmissionPolicy[] 
-            { 
+            {
+#if !NETSTANDARD1_6
                 new ApplicationLifecycleTransmissionPolicy(applicationLifecycle),
+#endif
                 new ThrottlingTransmissionPolicy(), 
                 new ErrorHandlingTransmissionPolicy(),
                 new PartialSuccessTransmissionPolicy(), 

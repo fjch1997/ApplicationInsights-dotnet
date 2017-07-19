@@ -185,8 +185,8 @@
                             responseContent = new HttpWebResponseWrapper()
                             {
                                 StatusCode = (int)response.StatusCode,
-                                StatusDescription = response.StatusDescription,
-                                RetryAfterHeader = response.Headers?.Get("Retry-After")
+                                StatusDescription = response.StatusDescription,                                
+                                RetryAfterHeader = response.Headers?["Retry-After"]
                             };
                         }
                         else

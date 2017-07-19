@@ -1,12 +1,15 @@
 ﻿<Project ToolsVersion="15.0" Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.6</TargetFramework>
-    <Authors>Microsoft</Authors>
-    <Company>Microsoft</Company>
-    <Copyright>Copyright © Microsoft. All Rights Reserved.</Copyright>
-	<GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
-    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+    <TargetFramework>netstandard1.6</TargetFramework>    
+	<GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+    <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+    <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
+    <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+	<GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <Company></Company>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -21,13 +24,26 @@
 
   <ItemGroup>
     <PackageReference Include="Desktop.Analyzers" Version="1.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
     <PackageReference Include="StyleCop.MSBuild" Version="4.7.55" />
-	<PackageReference Include="MicroBuild.Core" Version="0.2.0" />
+	<PackageReference Include="MicroBuild.Core" Version="0.2.0" />	
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.Net.Requests" Version="4.3.0" />    
+	<PackageReference Include="System.Net.NetworkInformation" Version="4.3.0" />    	
+	<PackageReference Include="System.Runtime.Serialization.Primitives" Version="4.3.0" />    	
+	<PackageReference Include="System.Threading.Thread" Version="4.3.0" />
+	<PackageReference Include="System.Security.AccessControl" Version="4.3.0" />	
+  </ItemGroup>
+  
+  
+  <ItemGroup>
     <ProjectReference Include="..\..\..\Core\Managed\Core.csproj" />
   </ItemGroup>
+  
+  <Import Project="..\Shared\Shared.projitems" Label="Shared" />
+  
 
   
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

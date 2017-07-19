@@ -8,6 +8,9 @@
     using System.Diagnostics.Tracing;
     using System.Net;
 #endif
+#if NETSTANDARD1_6
+    using System.Reflection;
+#endif
 
     [EventSource(Name = "Microsoft-ApplicationInsights-WindowsServer-TelemetryChannel")]
     internal sealed class TelemetryChannelEventSource : EventSource
@@ -486,7 +489,11 @@
             string name;
             try
             {
+#if NETSTANDARD1_6
+                name = Assembly.GetEntryAssembly().FullName;
+#else
                 name = AppDomain.CurrentDomain.FriendlyName;
+#endif
             }
             catch (Exception exp)
             {
