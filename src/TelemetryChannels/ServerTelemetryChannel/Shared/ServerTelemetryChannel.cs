@@ -31,7 +31,7 @@
 #if !NETSTANDARD1_6
         public ServerTelemetryChannel() : this(new Network(), new WebApplicationLifecycle())
 #else
-        // IApplicationLifecycle implemenation for netcore need to be written instead of null here.
+        // TODO: IApplicationLifecycle implemenation for netcore need to be written instead of null here.
         public ServerTelemetryChannel() : this(new Network(), null)
 #endif
         {
@@ -42,6 +42,7 @@
             var policies = new TransmissionPolicy[] 
             {
 #if !NETSTANDARD1_6
+                // TODO: REMOVE WHEN WE HAVE A NETCORE IMPLEMENTATION OF IApplicationLifecycle
                 new ApplicationLifecycleTransmissionPolicy(applicationLifecycle),
 #endif
                 new ThrottlingTransmissionPolicy(), 

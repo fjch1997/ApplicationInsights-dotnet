@@ -37,14 +37,11 @@
 	<PackageReference Include="System.Security.AccessControl" Version="4.3.0" />	
   </ItemGroup>
   
-  
   <ItemGroup>
     <ProjectReference Include="..\..\..\Core\Managed\Core.csproj" />
   </ItemGroup>
   
   <Import Project="..\Shared\Shared.projitems" Label="Shared" />
-  
-
   
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
@@ -55,6 +52,4 @@
     <Error Condition="!Exists('..\..\..\..\..\packages\StyleCop.MSBuild.4.7.55.0\build\StyleCop.MSBuild.Targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\packages\StyleCop.MSBuild.4.7.55.0\build\StyleCop.MSBuild.Targets'))" />
   </Target>
 
-  
-  
 </Project>

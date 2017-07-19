@@ -13,8 +13,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)AdaptiveSamplingTelemetryProcessor.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)AssemblyInfo.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Implementation\ApplicationFolderProvider.cs" />    
+    <Compile Include="$(MSBuildThisFileDirectory)AssemblyInfo.cs" /> 
 	<Compile Include="$(MSBuildThisFileDirectory)Implementation\ApplicationLifecycleTransmissionPolicy.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Implementation\ApplicationStoppingEventArgs.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Implementation\BackendResponse.cs" />
@@ -57,8 +56,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)TelemetryChannelBuilderExtensions.cs" />		
   </ItemGroup>
   
-  <ItemGroup Condition=" '$(TargetFramework)' != 'netstandard1.6' ">	
-  <Compile Include="$(MSBuildThisFileDirectory)Implementation\WebApplicationLifecycle.cs" />
+  <ItemGroup Condition=" '$(TargetFramework)' != 'netstandard1.6' ">
+    <Compile Include="$(MSBuildThisFileDirectory)Implementation\ApplicationFolderProvider.cs" />  
+	<Compile Include="$(MSBuildThisFileDirectory)Implementation\WebApplicationLifecycle.cs" />
   </ItemGroup>
   
   
