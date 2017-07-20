@@ -24,17 +24,17 @@
 
   <ItemGroup>
     <PackageReference Include="Desktop.Analyzers" Version="1.1.0" />
+	<PackageReference Include="MicroBuild.Core" Version="0.2.0" />	
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
     <PackageReference Include="StyleCop.MSBuild" Version="4.7.55" />
-	<PackageReference Include="MicroBuild.Core" Version="0.2.0" />	
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Net.Requests" Version="4.3.0" />    
-	<PackageReference Include="System.Net.NetworkInformation" Version="4.3.0" />    	
-	<PackageReference Include="System.Runtime.Serialization.Primitives" Version="4.3.0" />    	
+    <PackageReference Include="System.Net.Requests" Version="4.3.0" />
+	<PackageReference Include="System.Net.NetworkInformation" Version="4.3.0" />
+	<PackageReference Include="System.Runtime.Serialization.Primitives" Version="4.3.0" />
+	<PackageReference Include="System.Security.AccessControl" Version="4.3.0" />
 	<PackageReference Include="System.Threading.Thread" Version="4.3.0" />
-	<PackageReference Include="System.Security.AccessControl" Version="4.3.0" />	
   </ItemGroup>
   
   <ItemGroup>

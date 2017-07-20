@@ -18,6 +18,7 @@
   
   <Import Project="..\Shared.Tests\Shared.Tests.projitems" Label="Shared" />
   <Import Project="..\..\TestFramework\Shared\TestFramework.Shared.projitems" Label="Shared" />
+  <Import Project="..\..\..\src\TelemetryChannels\ServerTelemetryChannel\Shared\Shared.projitems" Label="Shared" />
   
   <ItemGroup>
     <ProjectReference Include="..\..\..\src\Core\Managed\Core.csproj" />
@@ -26,8 +27,8 @@
   <ItemGroup>
     <PackageReference Include="Desktop.Analyzers" Version="1.1.0" />
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
-    <PackageReference Include="StyleCop.MSBuild" Version="4.7.55" />
 	<PackageReference Include="MicroBuild.Core" Version="0.2.0" />	
+    <PackageReference Include="StyleCop.MSBuild" Version="4.7.55" />
   </ItemGroup>
   
   <ItemGroup>
@@ -35,6 +36,8 @@
 	<PackageReference Include="MSTest.TestAdapter" Version="1.1.18" />
 	<PackageReference Include="MSTest.TestFramework" Version="1.1.18" />
     <PackageReference Include="System.Diagnostics.StackTrace" Version="4.3.0" />
+	<PackageReference Include="System.Net.Requests" Version="4.3.0" />
+	<PackageReference Include="System.Security.AccessControl" Version="4.3.0" />
     <PackageReference Include="xunit.core" Version="2.2.0" />
   </ItemGroup>
   
