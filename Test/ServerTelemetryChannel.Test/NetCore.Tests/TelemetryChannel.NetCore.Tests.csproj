@@ -1,0 +1,28 @@
+﻿<Project ToolsVersion="15.0" Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.6</TargetFramework>    
+	<GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+    <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+    <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
+    <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+	<GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <Company></Company>
+  </PropertyGroup>
+
+  <Import Project="..\Shared.Tests\Shared.Tests.projitems" Label="Shared" />
+  <Import Project="..\..\TestFramework\Shared\TestFramework.Shared.projitems" Label="Shared" />
+  
+  <ItemGroup>
+    <!-- <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="1.1.2" /> -->
+    <!-- <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="1.1.2" /> -->
+    <!-- <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel" Version="1.1.2" /> -->
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0" />
+	<PackageReference Include="MSTest.TestAdapter" Version="1.1.18" />
+	<PackageReference Include="MSTest.TestFramework" Version="1.1.18" />
+    <PackageReference Include="System.Diagnostics.StackTrace" Version="4.3.0" />
+  </ItemGroup>
+  
+</Project>
