@@ -8,7 +8,12 @@
     using System.Security.AccessControl;
     using Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.Helpers;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
+    
+#if NETSTANDARD1_6
+    using Xunit;
+#else
     using Assert = Xunit.Assert;
+#endif
 
     /// <summary>
     /// We use these tests to understand actual behavior of <see cref="DirectoryInfo"/> and ensure that 

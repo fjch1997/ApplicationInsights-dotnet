@@ -11,7 +11,12 @@
     using Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.Implementation;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Moq;
+    
+#if NETSTANDARD1_6
+    using Xunit;
+#else
     using Assert = Xunit.Assert;
+#endif
     using Helpers;
     using System.Collections.Generic;
     using Extensibility.Implementation;

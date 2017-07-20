@@ -5,7 +5,12 @@
     using Microsoft.ApplicationInsights.TestFramework;
     using Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.Helpers;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
+    
+#if NETSTANDARD1_6
+    using Xunit;
+#else
     using Assert = Xunit.Assert;
+#endif
     using Channel.Helpers;
 
 #if !NET40

@@ -7,7 +7,12 @@
 #else
     using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 #endif
+    
+#if NETSTANDARD1_6
+    using Xunit;
+#else
     using Assert = Xunit.Assert;
+#endif
 
     [TestClass]
     public class CurrentThreadTaskSchedulerTest
