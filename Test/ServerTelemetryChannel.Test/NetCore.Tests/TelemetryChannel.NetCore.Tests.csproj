@@ -43,6 +43,8 @@
 	<PackageReference Include="MSTest.TestAdapter" Version="1.1.18" />
 	<PackageReference Include="MSTest.TestFramework" Version="1.1.18" />
     <PackageReference Include="System.Diagnostics.StackTrace" Version="4.3.0" />
+	<PackageReference Include="System.Diagnostics.Tracing" Version="4.3.0" />
+	<PackageReference Include="System.Diagnostics.TraceSource" Version="4.3.0" />
 	<PackageReference Include="System.Net.NetworkInformation" Version="4.3.0" />
 	<PackageReference Include="System.Net.Requests" Version="4.3.0" />
 	<PackageReference Include="System.Security.AccessControl" Version="4.3.0" />

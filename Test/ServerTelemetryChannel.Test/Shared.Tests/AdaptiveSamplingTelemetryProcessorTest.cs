@@ -15,7 +15,6 @@
     using Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-
     using Assert = Xunit.Assert;
 
     [TestClass]

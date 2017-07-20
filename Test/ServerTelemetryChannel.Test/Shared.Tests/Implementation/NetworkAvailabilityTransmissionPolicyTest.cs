@@ -1,17 +1,14 @@
 ﻿namespace Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.Implementation
 {
     using System;
-#if NET45
+#if NET40 || NET45 || NETSTANDARD1_6
     using System.Diagnostics.Tracing;
 #endif
     using System.Linq;
     using System.Net.Sockets;
     using Microsoft.ApplicationInsights.TestFramework;
     using Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.Helpers;
-
-#if NET40
-    using Microsoft.Diagnostics.Tracing;
-#endif
+    
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     
     using Assert = Xunit.Assert;
