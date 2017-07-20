@@ -11,14 +11,26 @@
 	<GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <Company></Company>
   </PropertyGroup>
-
+  
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;DEBUG;NETCORE;NETSTANDARD1_6</DefineConstants>
+  </PropertyGroup>
+  
   <Import Project="..\Shared.Tests\Shared.Tests.projitems" Label="Shared" />
   <Import Project="..\..\TestFramework\Shared\TestFramework.Shared.projitems" Label="Shared" />
   
   <ItemGroup>
-    <!-- <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="1.1.2" /> -->
-    <!-- <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="1.1.2" /> -->
-    <!-- <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel" Version="1.1.2" /> -->
+    <ProjectReference Include="..\..\..\src\Core\Managed\Core.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Desktop.Analyzers" Version="1.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="StyleCop.MSBuild" Version="4.7.55" />
+	<PackageReference Include="MicroBuild.Core" Version="0.2.0" />	
+  </ItemGroup>
+  
+  <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0" />
 	<PackageReference Include="MSTest.TestAdapter" Version="1.1.18" />
 	<PackageReference Include="MSTest.TestFramework" Version="1.1.18" />
