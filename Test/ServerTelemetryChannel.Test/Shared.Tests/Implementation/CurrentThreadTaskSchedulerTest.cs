@@ -2,17 +2,14 @@
 {
     using System.Threading;
     using System.Threading.Tasks;
-#if NET40 || NET45
+
+#if NET40 || NET45 || NETSTANDARD1_6
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 #else
     using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 #endif
-    
-#if NETSTANDARD1_6
-    using Xunit;
-#else
-    using Assert = Xunit.Assert;
-#endif
+
+using Assert = Xunit.Assert;
 
     [TestClass]
     public class CurrentThreadTaskSchedulerTest

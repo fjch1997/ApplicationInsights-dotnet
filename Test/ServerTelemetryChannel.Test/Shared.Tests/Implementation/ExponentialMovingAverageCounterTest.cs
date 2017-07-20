@@ -8,11 +8,7 @@
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 
-#if NETSTANDARD1_6
-    using Xunit;
-#else
     using Assert = Xunit.Assert;
-#endif
 
     using Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.Implementation;
 

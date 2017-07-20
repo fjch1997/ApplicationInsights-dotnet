@@ -16,13 +16,10 @@
 #if NET40
     using Microsoft.Diagnostics.Tracing;
 #endif
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
     
-#if NETSTANDARD1_6
-    using Xunit;
-#else
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Assert = Xunit.Assert;
-#endif
+
 #if !NET40
     using TaskEx = System.Threading.Tasks.Task;
 #endif

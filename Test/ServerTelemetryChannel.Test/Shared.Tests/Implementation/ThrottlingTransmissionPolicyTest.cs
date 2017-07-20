@@ -15,11 +15,7 @@
 #endif
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     
-#if NETSTANDARD1_6
-    using Xunit;
-#else
     using Assert = Xunit.Assert;
-#endif
 #if !NET40
     using TaskEx = System.Threading.Tasks.Task;
 #endif

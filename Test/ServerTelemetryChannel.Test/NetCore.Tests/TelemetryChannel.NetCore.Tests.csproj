@@ -9,19 +9,26 @@
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
 	<GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+	<GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+	<GenareteComVisibleAttribute>false</GenareteComVisibleAttribute>
     <Company></Company>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>35MSSharedLib1024.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>True</DelaySign>
   </PropertyGroup>
   
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>TRACE;DEBUG;NETCORE;NETSTANDARD1_6</DefineConstants>
   </PropertyGroup>
   
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildProjectDirectory), 'Test.props'))\Test.props" />
+
   <Import Project="..\Shared.Tests\Shared.Tests.projitems" Label="Shared" />
   <Import Project="..\..\TestFramework\Shared\TestFramework.Shared.projitems" Label="Shared" />
-  <Import Project="..\..\..\src\TelemetryChannels\ServerTelemetryChannel\Shared\Shared.projitems" Label="Shared" />
   
   <ItemGroup>
     <ProjectReference Include="..\..\..\src\Core\Managed\Core.csproj" />
+    <ProjectReference Include="..\..\..\src\TelemetryChannels\ServerTelemetryChannel\NetCore\TelemetryChannel.NetCore.csproj" />
   </ItemGroup>
   
   <ItemGroup>
@@ -36,8 +43,10 @@
 	<PackageReference Include="MSTest.TestAdapter" Version="1.1.18" />
 	<PackageReference Include="MSTest.TestFramework" Version="1.1.18" />
     <PackageReference Include="System.Diagnostics.StackTrace" Version="4.3.0" />
+	<PackageReference Include="System.Net.NetworkInformation" Version="4.3.0" />
 	<PackageReference Include="System.Net.Requests" Version="4.3.0" />
 	<PackageReference Include="System.Security.AccessControl" Version="4.3.0" />
+	<PackageReference Include="xunit.assert" Version="2.2.0" />
     <PackageReference Include="xunit.core" Version="2.2.0" />
   </ItemGroup>
   

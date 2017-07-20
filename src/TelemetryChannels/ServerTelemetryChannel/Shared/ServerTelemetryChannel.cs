@@ -10,7 +10,7 @@
 #if !NET40
     using TaskEx = System.Threading.Tasks.Task;
 #endif
-
+    
     /// <summary>
     /// Represents a communication channel for sending telemetry to Application Insights via HTTP/S.
     /// </summary>
